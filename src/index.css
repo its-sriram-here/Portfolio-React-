@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Italianno&display=swap');
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --font-display: 'Syne', sans-serif;
+    --animate-fizzy: fizzy 1s linear infinite;
+    --animate-background-pan: background-pan 3s linear infinite;
+
+    @keyframes fizzy {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-40px) scale(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes background-pan {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 90%;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #000;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
