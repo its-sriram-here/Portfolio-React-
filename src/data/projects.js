@@ -4,7 +4,7 @@ import gsheetsImg from '../assets/project-gsheets.png';
 import amazonImg from '../assets/project-amazon.png';
 import dynamicPortfolioImg from '../assets/project-dynamic-portfolio.png';
 
-import jewelleryImg from '../assets/project-jewellery.png';
+import jewelleryImg from '../assets/project-dhandapani-vkl.png';
 import investifyImg from '../assets/project-investify.png';
 import luxmartImg from '../assets/project-luxmart.png';
 
@@ -36,8 +36,8 @@ export const projects = [
     {
         title: "Dhandapani Jewellery",
         description: "A modern e-commerce website for a jewellery brand, featuring an elegant catalog and contact details.",
-        tech: ["HTML", "Bootstrap CSS", "JavaScript"],
-        link: "https://dhandapani-jewellery-steel.vercel.app/",
+        tech: ["React", "Tailwind CSS", "GSAP"],
+        link: "https://dhandapani-jewellery-vkl.vercel.app/",
         github: "#",
         image: jewelleryImg
     },
