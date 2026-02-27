@@ -7,6 +7,7 @@ import dynamicPortfolioImg from '../assets/project-dynamic-portfolio.png';
 import jewelleryImg from '../assets/project-dhandapani-vkl.png';
 import investifyImg from '../assets/project-investify.png';
 import luxmartImg from '../assets/project-luxmart.png';
+import finmanageImg from '../assets/project-finmanage.png';
 
 export const projects = [
     {
@@ -24,6 +25,14 @@ export const projects = [
         link: "https://lux-mart-e-comm-app.vercel.app/",
         github: "#",
         image: luxmartImg
+    },
+    {
+        title: "FinManage",
+        description: "A comprehensive financial management dashboard with real-time tracking, insights, and secure JWT authentication.",
+        tech: ["MERN Stack", "JWT Authentication", "Tailwind CSS", "React", "Node.js", "Express", "MongoDB"],
+        link: "https://finmanage.onrender.com/",
+        github: "#",
+        image: finmanageImg
     },
     {
         title: "Dynamic Portfolio",
