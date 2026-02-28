@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Copy, Check } from 'lucide-react';
+import { Mail, Copy, Check, Github, Linkedin, Facebook, Instagram } from 'lucide-react';
 import GradientHeading from './GradientHeading';
 import TextReveal from './TextReveal';
 import PremiumButton from './PremiumButton';
@@ -66,6 +66,19 @@ const Contact = () => {
                         {copied ? <Check size={20} className="text-green-500" /> : <Copy size={20} className="group-hover:text-purple-400 transition-colors" />}
                         {copied ? "Email Copied!" : "Copy Email"}
                     </button>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="mt-16 flex justify-center gap-8 text-gray-500"
+                >
+                    <a href="https://github.com/its-sriram-here" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:scale-110 transition-all duration-300"><Github size={28} /></a>
+                    <a href="https://www.linkedin.com/in/its-sriram-here/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 hover:scale-110 transition-all duration-300"><Linkedin size={28} /></a>
+                    <a href="https://www.facebook.com/share/1GbRW6534V/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:scale-110 transition-all duration-300"><Facebook size={28} /></a>
+                    <a href="https://instagram.com/its_sriram_here" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 hover:scale-110 transition-all duration-300"><Instagram size={28} /></a>
                 </motion.div>
             </div>
         </section>
