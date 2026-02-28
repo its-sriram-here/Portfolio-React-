@@ -29,18 +29,10 @@ export const projects = [
     {
         title: "FinManage",
         description: "A comprehensive financial management dashboard with real-time tracking, insights, and secure JWT authentication.",
-        tech: ["MERN Stack", "JWT Authentication", "Tailwind CSS", "React", "Node.js", "Express", "MongoDB"],
+        tech: ["JWT Authentication", "Tailwind CSS", "React", "Node.js", "Express", "MongoDB"],
         link: "https://finmanage.onrender.com/",
         github: "#",
         image: finmanageImg
-    },
-    {
-        title: "Dynamic Portfolio",
-        description: "A modern, interactive portfolio website featuring advanced animations and a dynamic user experience.",
-        tech: ["HTML", "Bootstrap CSS", "JavaScript Frameworks"],
-        link: "https://its-sriram-dev.vercel.app/",
-        github: "#",
-        image: dynamicPortfolioImg
     },
     {
         title: "Dhandapani Jewellery",
@@ -73,6 +65,14 @@ export const projects = [
         link: "https://amazeon-clone-sriram.vercel.app/",
         github: "#",
         image: amazonImg
+    },
+    {
+        title: "Dynamic Portfolio",
+        description: "A modern, interactive portfolio website featuring advanced animations and a dynamic user experience.",
+        tech: ["HTML", "Bootstrap CSS", "JavaScript Frameworks"],
+        link: "https://its-sriram-dev.vercel.app/",
+        github: "#",
+        image: dynamicPortfolioImg
     },
     {
         title: "Project Coming Soon",
