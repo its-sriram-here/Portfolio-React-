@@ -53,14 +53,14 @@ const Certificates = () => {
                                 : ""
                                 }`}
                         >
-                            {/* Hover Image Overlay */}
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                            {/* Mobile-visible / Desktop-hover Image Overlay */}
+                            <div className="absolute inset-0 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
                                 <img src={cert.image} alt={cert.title} className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" />
-                                {/* Subtle gradient only at bottom to keep text readable if needed, but mostly clear */}
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500" />
+                                {/* Darken slightly on mobile for text contrast, clear on PC hover */}
+                                <div className="absolute inset-0 bg-black/60 md:bg-black/40 group-hover:bg-black/10 transition-colors duration-500" />
                             </div>
 
-                            <div className="relative z-10 flex items-start gap-6 group-hover:opacity-0 transition-opacity duration-300">
+                            <div className="relative z-10 flex flex-col md:flex-row items-start gap-6 md:group-hover:opacity-0 transition-opacity duration-300">
                                 <div className="p-4 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl text-cyan-400 shadow-lg shadow-cyan-900/20">
                                     <Award size={32} />
                                 </div>

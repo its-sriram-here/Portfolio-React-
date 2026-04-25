@@ -5,7 +5,9 @@ import Footer from './components/Footer';
 import SectionReveal from './components/SectionReveal';
 import BackgroundEffects from './components/BackgroundEffects';
 
+import CommandMenu from './components/CommandMenu';
 import About from './components/About';
+import SkillMarquee from './components/SkillMarquee';
 import Experience from './components/Experience';
 import Certificates from './components/Certificates';
 import Projects from './components/Projects';
@@ -14,6 +16,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div className="bg-black min-h-screen text-white relative">
+      <CommandMenu />
       <BackgroundEffects />
       <Navbar />
       <main>
@@ -21,6 +24,7 @@ function App() {
         <SectionReveal>
           <About />
         </SectionReveal>
+        <SkillMarquee />
         <SectionReveal delay={0.2}>
           <Experience />
         </SectionReveal>

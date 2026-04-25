@@ -8,46 +8,32 @@
     --animate-fizzy: fizzy 1s linear infinite;
     --animate-background-pan: background-pan 3s linear infinite;
     --animate-shimmer: shimmer 2s infinite;
+    --animate-marquee: marquee 30s linear infinite;
 
     @keyframes fizzy {
-        0% {
-            transform: translateY(0) scale(1);
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(-40px) scale(0);
-            opacity: 0;
-        }
+        0% { transform: translateY(0) scale(1); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-40px) scale(0); opacity: 0; }
     }
 
     @keyframes background-pan {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
     @keyframes shimmer {
-        0% {
-            transform: translateX(-100%) skewX(-15deg);
-        }
-        100% {
-            transform: translateX(200%) skewX(-15deg);
-        }
+        0% { transform: translateX(-100%) skewX(-15deg); }
+        100% { transform: translateX(200%) skewX(-15deg); }
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
     }
 }
+
+/* Base Styles & Custom Utilities (Outside Theme Block) */
 
 html {
     scroll-behavior: smooth;
@@ -60,12 +46,7 @@ body {
     color: #fff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
 }
 

@@ -24,8 +24,9 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full z-[100] transition-all duration-500 ${scrolled ? 'bg-white/5 backdrop-blur-md py-4 border-b border-white/5 shadow-lg shadow-black/5' : 'bg-transparent py-6'
-                }`}
+            className={`fixed w-full z-[100] transition-all duration-[600ms] border-b ${
+                scrolled ? 'bg-black/70 backdrop-blur-xl py-4 border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent py-6 border-transparent'
+            }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="#" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white flex items-center gap-2 group">

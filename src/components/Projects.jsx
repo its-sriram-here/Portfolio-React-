@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 import { ExternalLink, ArrowDown, FileText } from 'lucide-react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTailwindcss, SiExpress, SiMongodb } from 'react-icons/si';
@@ -65,8 +66,18 @@ const Projects = () => {
                                 exit={{ opacity: 0, y: 50, scale: 0.9, transition: { duration: 0.3 } }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.1, type: "spring", bounce: 0.3 }}
-                                className="group relative bg-gray-900/40 border border-white/5 rounded-3xl overflow-hidden hover:border-cyan-500/30 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-cyan-900/20"
                             >
+                                <Tilt 
+                                    glareEnable={true} 
+                                    glareMaxOpacity={0.15} 
+                                    glareColor="#22d3ee" 
+                                    glarePosition="all" 
+                                    tiltMaxAngleX={8} 
+                                    tiltMaxAngleY={8} 
+                                    scale={1.02}
+                                    transitionSpeed={2500}
+                                    className="group relative h-full bg-gray-900/40 border border-white/5 rounded-3xl overflow-hidden hover:border-cyan-500/30 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-cyan-900/20 transform-gpu"
+                                >
                                 {/* Project Image */}
                                 <div className="relative h-56 overflow-hidden">
                                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer relative">
@@ -78,14 +89,14 @@ const Projects = () => {
                                         />
                                     </a>
                                     <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none md:pointer-events-auto">
-                                        <span className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors block">
+                                        <span className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors block shadow-[0_0_15px_rgba(34,211,238,0.5)]">
                                             <ExternalLink size={20} />
                                         </span>
                                     </div>
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-grow relative z-20">
-                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors drop-shadow-md">
                                         {project.title}
                                     </h3>
 
@@ -97,7 +108,7 @@ const Projects = () => {
                                         {project.tech.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="flex items-center gap-1.5 px-3 py-1 text-sm font-medium bg-white/5 text-gray-300 rounded-full border border-white/5 group-hover:border-cyan-500/30 group-hover:text-cyan-300 transition-colors"
+                                                className="flex items-center gap-1.5 px-3 py-1 text-sm font-medium bg-white/5 text-gray-300 rounded-full border border-white/5 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 group-hover:text-cyan-300 transition-colors shadow-inner"
                                             >
                                                 {getTechIcon(tech)}
                                                 {tech}
@@ -105,6 +116,7 @@ const Projects = () => {
                                         ))}
                                     </div>
                                 </div>
+                                </Tilt>
                             </motion.div>
                         ))}
                     </AnimatePresence>

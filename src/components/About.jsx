@@ -35,7 +35,7 @@ const About = () => {
                         </motion.div>
                     </div>
 
-                    <div className="w-full lg:w-[400px] xl:w-[450px] relative hidden lg:block group ml-auto">
+                    <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:w-[400px] xl:w-[450px] relative block group lg:ml-auto mt-12 lg:mt-0">
                         {/* Soft Ambient Cinematic Glow */}
                         <div className="absolute -inset-4 bg-gradient-to-r from-cyan-600/30 to-emerald-600/30 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                         
