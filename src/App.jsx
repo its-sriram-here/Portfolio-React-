@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
@@ -6,14 +6,12 @@ import SectionReveal from './components/SectionReveal';
 import BackgroundEffects from './components/BackgroundEffects';
 
 import About from './components/About';
+import Experience from './components/Experience';
 import Certificates from './components/Certificates';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
-
-
 function App() {
-  console.log("App rendering...");
   return (
     <div className="bg-black min-h-screen text-white relative">
       <BackgroundEffects />
@@ -22,6 +20,9 @@ function App() {
         <Hero />
         <SectionReveal>
           <About />
+        </SectionReveal>
+        <SectionReveal delay={0.2}>
+          <Experience />
         </SectionReveal>
         <SectionReveal delay={0.2}>
           <Certificates />

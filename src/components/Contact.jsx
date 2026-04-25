@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Copy, Check, Github, Linkedin, Facebook, Instagram } from 'lucide-react';
 import GradientHeading from './GradientHeading';
 import TextReveal from './TextReveal';
-import PremiumButton from './PremiumButton';
+import contactAvatar from '../assets/contact-avatar.jpg';
 
 const Contact = () => {
     const [copied, setCopied] = useState(false);
@@ -30,10 +30,26 @@ const Contact = () => {
                     </div>
                     <div className="flex justify-center">
                         <TextReveal className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed" delay={0.2}>
-                            I'm currently available for freelance work and open to new opportunities.
-                            If you have a project in mind or just want to say hello, feel free to reach!
+                            If you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out!
                         </TextReveal>
                     </div>
+                </div>
+
+                <div className="flex justify-center mb-10">
+                    <motion.div 
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ type: "spring", bounce: 0.5, delay: 0.3 }}
+                        className="relative group/avatar"
+                    >
+                        <div className="absolute inset-[-10px] bg-gradient-to-r from-cyan-500 via-rose-500 to-purple-600 rounded-full blur-[20px] opacity-30 group-hover/avatar:opacity-60 transition-opacity duration-500" />
+                        <img 
+                            src={contactAvatar} 
+                            alt="Sriram" 
+                            className="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover object-[50%_45%] border-[4px] border-[#0a0a0a] shadow-2xl relative z-10 transition-transform duration-500 group-hover/avatar:scale-110" 
+                        />
+                    </motion.div>
                 </div>
 
                 <motion.div

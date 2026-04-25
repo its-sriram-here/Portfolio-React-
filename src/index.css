@@ -7,6 +7,7 @@
     --font-display: 'Syne', sans-serif;
     --animate-fizzy: fizzy 1s linear infinite;
     --animate-background-pan: background-pan 3s linear infinite;
+    --animate-shimmer: shimmer 2s infinite;
 
     @keyframes fizzy {
         0% {
@@ -35,6 +36,15 @@
 
         100% {
             background-position: 0% 50%;
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-100%) skewX(-15deg);
+        }
+        100% {
+            transform: translateX(200%) skewX(-15deg);
         }
     }
 }

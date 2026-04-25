@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { skills } from '../data/skills';
 import GradientHeading from './GradientHeading';
-
+import profileImage from '../assets/profile-secondary.jpg';
 
 const About = () => {
     return (
@@ -11,27 +11,66 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black via-emerald-900/25 to-black animate-pulse duration-[7000ms]" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="mb-20">
-                    <GradientHeading className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">
-                        About Me
-                    </GradientHeading>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="space-y-6 max-w-4xl"
-                    >
-                        <p className="text-gray-200 text-xl md:text-2xl leading-relaxed">
-                            I am a dedicated Full Stack Developer with a passion for building scalable and efficient web applications.
-                            With a strong foundation in both frontend and backend technologies, I enjoy solving complex problems
-                            and creating seamless user experiences.
-                        </p>
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-                            My journey in tech is driven by curiosity and a constant desire to learn.
-                            I specialize in the MERN stack and have experience working with modern tools and frameworks.
-                        </p>
-                    </motion.div>
+                <div className="mb-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div className="flex-1">
+                        <GradientHeading className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">
+                            About Me
+                        </GradientHeading>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="space-y-6 max-w-2xl"
+                        >
+                            <p className="text-gray-200 text-xl md:text-2xl leading-relaxed">
+                                I am a dedicated Full Stack Developer with a passion for building scalable and efficient web applications.
+                                With a strong foundation in both frontend and backend technologies, I enjoy solving complex problems
+                                and creating seamless user experiences.
+                            </p>
+                            <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+                                My journey in tech is driven by curiosity and a constant desire to learn.
+                                I specialize in the MERN stack and have experience working with modern tools and frameworks.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    <div className="w-full lg:w-[400px] xl:w-[450px] relative hidden lg:block group ml-auto">
+                        {/* Soft Ambient Cinematic Glow */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-600/30 to-emerald-600/30 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                        
+                        <motion.div 
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -10 }}
+                            transition={{ duration: 0.6, type: "spring", stiffness: 200 }}
+                            className="relative rounded-[2.5rem] bg-zinc-900/40 backdrop-blur-xl border border-white/10 p-3 shadow-2xl z-10"
+                        >
+                            <div className="relative rounded-[2rem] overflow-hidden bg-black">
+                                {/* Top Vignette for text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/10 to-transparent z-10" />
+                                
+                                <img 
+                                    src={profileImage} 
+                                    alt="Sriram" 
+                                    className="w-full aspect-[4/5] object-cover object-[50%_15%] filter grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100 relative z-0"
+                                />
+
+                                {/* Internal Glassmorphism Overlay Info */}
+                                <div className="absolute top-6 left-6 right-6 z-20 transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 inline-flex items-center gap-2 mb-3">
+                                        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+                                        <span className="text-cyan-100 text-xs font-bold tracking-widest uppercase">Building Things</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-md">Full Stack Dev</h3>
+                                    <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                        MERN Stack • UI/UX • Clean Code
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
