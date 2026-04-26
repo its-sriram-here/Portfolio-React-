@@ -95,30 +95,9 @@ const Hero = () => {
                         >
                             View My Resume
                         </PremiumButton>
-
-                        <button
-                            onClick={() => {
-                                navigator.vibrate?.(15);
-                                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                            }}
-                            className="px-8 py-4 rounded-full font-bold text-white border border-white/20 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] transition-all duration-300 relative overflow-hidden group"
-                        >
-                            <span className="relative z-10">Contact Me</span>
-                            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </button>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        className="mt-12 flex gap-8 text-gray-400"
-                    >
-                        <a href="https://github.com/its-sriram-here" target="_blank" rel="noopener noreferrer" onClick={() => navigator.vibrate?.(15)} className="hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300"><Github size={28} /></a>
-                        <a href="https://www.linkedin.com/in/its-sriram-here/" target="_blank" rel="noopener noreferrer" onClick={() => navigator.vibrate?.(15)} className="hover:text-blue-500 transition-colors transform hover:scale-110 duration-300"><Linkedin size={28} /></a>
-                        <a href="https://instagram.com/its_sriram_here" target="_blank" rel="noopener noreferrer" onClick={() => navigator.vibrate?.(15)} className="hover:text-pink-500 transition-colors transform hover:scale-110 duration-300"><Instagram size={28} /></a>
-                        <a href="https://www.facebook.com/share/1GbRW6534V/" target="_blank" rel="noopener noreferrer" onClick={() => navigator.vibrate?.(15)} className="hover:text-blue-600 transition-colors transform hover:scale-110 duration-300"><Facebook size={28} /></a>
-                    </motion.div>
+
                 </div>
 
                 {/* Avatar Section with 3D Parallax */}
