@@ -30,7 +30,7 @@ const About = () => {
                             </p>
                             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
                                 My journey in tech is driven by curiosity and a constant desire to learn.
-                                I specialize in the MERN stack and have experience working with modern tools and frameworks.
+                                When I'm not coding, you can usually find me losing track of time in a game of chess.
                             </p>
                         </motion.div>
                     </div>
@@ -65,7 +65,7 @@ const About = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-md">Full Stack Dev</h3>
                                     <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                                        MERN Stack • UI/UX • Clean Code
+                                        MERN Stack • UI/UX • Chess Enthusiast
                                     </p>
                                 </div>
                             </div>

@@ -94,8 +94,11 @@ const Contact = () => {
                                     <div className="ml-4 md:ml-8 mt-2">
                                         <span className="text-[#a5d6ff]">name</span><span className="text-[#ff7b72]">:</span> <span className="text-[#a5d6ff]">'</span><span className="text-[#a5d6ff]">Sriram</span><span className="text-[#a5d6ff]">'</span><span className="text-[#ff7b72]">,</span>
                                     </div>
-                                    <div className="ml-4 md:ml-8 mt-2 group-hover:bg-[#161b22] inline-block pr-4 rounded transition-colors duration-300">
+                                    <div className="ml-4 md:ml-8 mt-2 group-hover:bg-[#161b22] w-fit pr-4 rounded transition-colors duration-300">
                                         <span className="text-[#a5d6ff]">email</span><span className="text-[#ff7b72]">:</span> <span className="text-[#a5d6ff]">'</span><a href={`mailto:${email}`} className="text-[#a5d6ff] cursor-pointer hover:text-[#79c0ff] hover:underline transition-colors">{email}</a><span className="text-[#a5d6ff]">'</span><span className="text-[#ff7b72]">,</span>
+                                    </div>
+                                    <div className="ml-4 md:ml-8 mt-2 group-hover:bg-[#161b22] w-fit pr-4 rounded transition-colors duration-300">
+                                        <span className="text-[#d2a8ff]">playChess</span><span className="text-[#ff7b72]">:</span> <span className="text-[#ff7b72]">()</span> <span className="text-[#ff7b72]">{"=>"}</span> <span className="text-[#d2a8ff]">challenge</span>(<span className="text-[#a5d6ff]">'</span><a href="https://www.chess.com/member/its_sriram_here" target="_blank" rel="noopener noreferrer" className="text-[#a5d6ff] cursor-pointer hover:text-[#79c0ff] hover:underline transition-colors" title="Challenge me on Chess.com!">@its_sriram_here ♟️</a><span className="text-[#a5d6ff]">'</span>)<span className="text-[#ff7b72]">,</span>
                                     </div>
                                     <div className="ml-4 md:ml-8 mt-2">
                                         <span className="text-[#d2a8ff]">network</span><span className="text-[#ff7b72]">:</span> <span className="text-[#ff7b72]">async</span> () <span className="text-[#ff7b72]">{"=>"}</span> {'{'}
@@ -218,6 +221,44 @@ const Contact = () => {
                         </a>
                     </div>
                     <a href="https://www.facebook.com/share/1GbRW6534V/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:scale-110 transition-all duration-300 relative z-10"><Facebook size={28} /></a>
+                    
+                    {/* Chess Icon with Premium Hover Preview */}
+                    <div className="relative group/chess flex items-center justify-center">
+                        {/* The Hover Tooltip Window */}
+                        <div className="absolute bottom-full mb-6 w-64 md:w-[300px] opacity-0 group-hover/chess:opacity-100 scale-95 group-hover/chess:scale-100 transition-all duration-300 pointer-events-none z-50 origin-bottom left-1/2 -translate-x-1/2 flex flex-col items-center">
+                            <div className="w-full rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(34,197,94,0.15)] border border-white/10 bg-[#0d1117] relative z-10 transition-transform duration-500 transform group-hover/chess:-translate-y-2">
+                                {/* macOS style top bar for the browser frame */}
+                                <div className="h-6 bg-[#161b22] border-b border-[#30363d] flex items-center px-3 gap-1.5">
+                                    <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                                    <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                                    <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                                </div>
+                                {/* CSS Rendered Profile Card */}
+                                <div className="w-full h-[200px] bg-[#312e2b] flex flex-col items-center justify-center relative overflow-hidden">
+                                     {/* Checkerboard Pattern overlay */}
+                                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), repeating-linear-gradient(45deg, #000 25%, #312e2b 25%, #312e2b 75%, #000 75%, #000)', backgroundPosition: '0 0, 10px 10px', backgroundSize: '20px 20px' }}></div>
+                                     <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-700 rounded-xl flex items-center justify-center text-4xl shadow-inner border border-white/20 mb-3 z-10 drop-shadow-2xl">
+                                         ♞
+                                     </div>
+                                     <h3 className="text-white font-bold text-lg z-10 tracking-wide">Sriram</h3>
+                                     <p className="text-green-400 text-sm font-medium mt-1 z-10">@its_sriram_here</p>
+                                     <div className="mt-3 px-4 py-1 bg-green-500/20 border border-green-500/50 rounded-full text-green-300 text-xs z-10 font-medium">
+                                         Challenge Me!
+                                     </div>
+                                </div>
+                            </div>
+                            {/* Ambient Glow */}
+                            <div className="absolute inset-x-0 bottom-0 h-10 bg-green-500/20 blur-2xl -z-10 group-hover/chess:opacity-100 opacity-0 transition-opacity duration-300" />
+                            
+                            {/* Small downward pointing connector triangle */}
+                            <div className="w-3 h-3 bg-[#0d1117] border-b border-r border-[#30363d] transform rotate-45 -translate-y-2 opacity-0 group-hover/chess:opacity-100 transition-all duration-300 group-hover/chess:-translate-y-4 shadow-[5px_5px_15px_rgba(34,197,94,0.2)]" />
+                        </div>
+
+                        {/* Actual Icon Link */}
+                        <a href="https://www.chess.com/member/its_sriram_here" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-500 hover:scale-125 transition-all duration-300 relative z-10 text-[26px] leading-none flex items-center h-[28px] drop-shadow-[0_0_10px_rgba(34,197,94,0)] hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]">
+                            ♟️
+                        </a>
+                    </div>
                     
                     {/* Instagram Icon with Premium Hover Preview */}
                     <div className="relative group/insta flex items-center justify-center">
