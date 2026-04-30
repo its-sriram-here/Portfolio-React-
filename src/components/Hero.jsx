@@ -6,7 +6,6 @@ import avatar2 from '../assets/sriram-avatar-2.jpg';
 import TextReveal from './TextReveal';
 import TypewriterText from './TypewriterText';
 import ShimmerText from './ShimmerText';
-import StatusBadge from './StatusBadge';
 import PremiumButton from './PremiumButton';
 
 const Hero = () => {
@@ -44,16 +43,7 @@ const Hero = () => {
             <div className="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-blue-600/25 rounded-full blur-[120px] animate-pulse delay-1000 will-change-transform" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-                <div className="flex flex-col items-start text-left">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="mb-8 h-10" // Fixed height to prevent layout shift
-                    >
-                        <StatusBadge />
-                    </motion.div>
-
+                <div className="flex flex-col items-start text-left pt-8">
                     <div className="mb-8 min-h-[160px] md:min-h-[200px]">
                         <div className="block">
                             <TypewriterText
